@@ -9,6 +9,16 @@
 | бінарник `bat` | системний пакет |
 | конфіг | `~/.config/bat/config` (керується через chezmoi) |
 
+## Швидкий старт (нова машина)
+
+```bash
+# 1. Встановити chezmoi
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
+
+# 2. Застосувати dotfiles (встановить bat і конфіг)
+chezmoi init --apply https://github.com/andrewpas/work-dotfiles.git
+```
+
 ## Поточна конфігурація
 
 - тема: `gruvbox-dark`
