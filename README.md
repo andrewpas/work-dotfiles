@@ -12,6 +12,7 @@
 | Alacritty | `alacritty.toml` | [alacritty.md](alacritty.md) |
 | bat | `~/.config/bat/config` | [bat.md](bat.md) |
 | ranger | — | [ranger.md](ranger.md) |
+| Midnight Commander | `~/.config/mc/ini` | [mc.md](mc.md) |
 
 ## Розгортання на новій машині
 
@@ -40,6 +41,7 @@ chezmoi init --apply https://github.com/andrewpas/work-dotfiles.git
 | `run_once_install-nvim.sh` | встановлює neovim ≥ 0.10 |
 | `run_once_install-alacritty.sh` | встановлює alacritty |
 | `run_once_install-tmux.sh` | встановлює tmux + Oh my tmux! |
+| `run_once_install-mc.sh` | встановлює Midnight Commander |
 
 ### 3. Перезапустити shell
 
