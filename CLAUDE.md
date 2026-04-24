@@ -12,7 +12,12 @@
 │   ├── alacritty/private_alacritty.toml → ~/.config/alacritty/alacritty.toml
 │   ├── bat/config                     → ~/.config/bat/config
 │   ├── nvim/                          → ~/.config/nvim/  (NvChad конфіг)
-│   └── tmux/tmux.conf.local           → ~/.config/tmux/tmux.conf.local
+│   ├── tmux/tmux.conf.local           → ~/.config/tmux/tmux.conf.local
+│   └── private_mc/
+│       ├── ini                        → ~/.config/mc/ini
+│       └── empty_panels.ini           → ~/.config/mc/panels.ini
+├── dot_local/share/private_mc/skins/
+│   └── gruvbox-dark-hard.ini          → ~/.local/share/mc/skins/gruvbox-dark-hard.ini
 ├── run_once_before_install-zsh.sh     # виконується першим
 ├── run_once_install-oh-my-zsh.sh
 ├── run_once_install-zsh-plugins.sh
@@ -22,8 +27,9 @@
 ├── run_once_install-nvim.sh
 ├── run_once_install-alacritty.sh
 ├── run_once_install-tmux.sh           # tmux + Oh my tmux!
+├── run_once_install-mc.sh             # Midnight Commander
 ├── README.md                          # інструкція для нової машини
-├── zsh.md / bat.md / nvim.md / ...    # документація по кожному інструменту
+├── zsh.md / bat.md / nvim.md / mc.md / ...  # документація по кожному інструменту
 └── CLAUDE.md                          # цей файл
 ```
 
@@ -73,3 +79,4 @@ git add . && git commit -m "chore: update <tool> config" && git push
 - **bat на Ubuntu**: бінарник називається `batcat` — скрипт створює симлінк `~/.local/bin/bat`.
 - **nvim на Ubuntu/OL9**: встановлюється AppImage (apt/dnf версія < 0.10, потрібна NvChad).
 - **alacritty на OL9**: збирається через `cargo` (відсутній в EPEL).
+- **mc**: конфіг у `private_mc/` (права 700 на директорію). Скін gruvbox-dark-hard зберігається у `dot_local/share/private_mc/skins/` і деплоїться в `~/.local/share/mc/skins/`. Зовнішній редактор: nvim (`use_internal_edit=false`).
