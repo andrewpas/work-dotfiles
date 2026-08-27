@@ -13,6 +13,7 @@
 | bat | `~/.config/bat/config` | [bat.md](bat.md) |
 | ranger | — | [ranger.md](ranger.md) |
 | Midnight Commander | `~/.config/mc/ini` | [mc.md](mc.md) |
+| rtk (Rust Token Killer) | `~/.config/rtk/config.toml` | [rtk.md](rtk.md) |
 
 ## Розгортання на новій машині
 
@@ -42,6 +43,7 @@ chezmoi init --apply https://github.com/andrewpas/work-dotfiles.git
 | `run_once_install-alacritty.sh` | встановлює alacritty |
 | `run_once_install-tmux.sh` | встановлює tmux + Oh my tmux! |
 | `run_once_install-mc.sh` | встановлює Midnight Commander |
+| `run_once_install-rtk.sh` | встановлює rtk + ripgrep, налаштовує хук для Claude Code |
 
 ### 3. Перезапустити shell
 

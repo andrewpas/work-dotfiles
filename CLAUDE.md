@@ -79,4 +79,8 @@ git add . && git commit -m "chore: update <tool> config" && git push
 - **bat на Ubuntu**: бінарник називається `batcat` — скрипт створює симлінк `~/.local/bin/bat`.
 - **nvim на Ubuntu/OL9**: встановлюється AppImage (apt/dnf версія < 0.10, потрібна NvChad).
 - **alacritty на OL9**: збирається через `cargo` (відсутній в EPEL).
+- **rtk**: конфіг (`~/.config/rtk/config.toml`) НЕ керується chezmoi — генерується самим rtk.
+  Скрипт виконується до `run_once_install-tools.sh` (алфавітний порядок), тому brew ще
+  недоступний і використовується офіційний `install.sh`. Хук `rtk init -g --auto-patch`
+  править `~/.claude/settings.json`, який теж поза chezmoi.
 - **mc**: конфіг у `private_mc/` (права 700 на директорію). Скін gruvbox-dark-hard зберігається у `dot_local/share/private_mc/skins/` і деплоїться в `~/.local/share/mc/skins/`. Зовнішній редактор: nvim (`use_internal_edit=false`).
